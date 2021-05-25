@@ -11,14 +11,14 @@ void setup() {
 void loop() {
   int motion =digitalRead(PIR_sensor);
   if(motion){
-    Serial.println(" Warning : Motion detected !");
-    digitalWrite(LED,HIGH);
-    tone(buzzer, 1000);
+    Serial.println(" Warning : Motion detected !"); // Displays msg on serial monitor
+    digitalWrite(LED,HIGH); // Switches on LED
+    tone(buzzer, 1000); // Triggers buzzer to 1000 Hz frequency
   }
   else{
-     Serial.println("No motion detected");
-     digitalWrite(LED,LOW);
-     noTone(buzzer);
+     Serial.println("No motion detected"); // Displays msg on serial monitor
+     digitalWrite(LED,LOW); // Switches off the LED 
+     noTone(buzzer); // Switches off the buzzer
   }
   delay(500);
 
